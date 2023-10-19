@@ -14,6 +14,9 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
+  var settingProvider=SettingProvider();
+  await settingProvider.loadTheme();
+  await settingProvider.loadLocale();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
@@ -24,7 +27,7 @@ void main() async{
           create: (BuildContext buildContext) => AuthProvider(),
         ),
         ChangeNotifierProvider(
-          create: (BuildContext buildContext) => SettingProvider(),
+          create: (BuildContext buildContext) => settingProvider,
         ),
       ],
       child: const MyApp(),
