@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "990070634096",
+    "project_id": "rana-todo-list",
+    "storage_bucket": "rana-todo-list.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:990070634096:android:eab99ac5b2d7229bfa66b5",
+        "android_client_info": {
+          "package_name": "com.example.todo_list"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9GoRb0FfJ2d_g3t2vY2zezU8LvzcrCC4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,21 @@
+{
+  "task_title" : "Task Title",
+  "task_description" : "Task Description",
+  "selected_date" : "Selected Date",
+  "add_task" : "Add Task",
+  "theme": "Theme",
+  "language" : "Language",
+  "dark" : "Dark",
+  "light" : "Light",
+  "full_name": "Full Name",
+  "user_name": "User Name",
+  "email": "E-mail",
+  "password": "Password",
+  "re_password": "Re-password",
+  "create_account": "Create Account",
+  "login": "Login",
+  "dont_have_account": "Don't have account?",
+  "already_have_account" : "Already have account? "
+
+
+}

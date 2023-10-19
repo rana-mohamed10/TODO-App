@@ -1,0 +1,19 @@
+{
+  "task_title" : "عنوان المهمة",
+  "task_description" : "وصف المهمة",
+  "selected_date" : "التاريخ",
+  "add_task" : "أضف المهمة",
+  "theme": "السمة",
+  "language" : "اللغة",
+  "dark" : "ليلي",
+  "light" : "نهاري",
+  "full_name": "الاسم كامل",
+  "user_name": "اسم المسنخدم",
+  "email": "البريد الإلكتروني",
+  "password": "كلمة المرور",
+  "re_password": "تأكيد كلمة المرور",
+  "create_account": "إنشاء حساب",
+  "login": "تسجيل الدخول",
+  "dont_have_account": "لا تمتلك حساب؟",
+  "already_have_account" : "تمتلك جساب بالفعل؟ "
+}
