@@ -7,9 +7,11 @@ import 'package:todo_list/Database/UserDao.dart';
 import 'package:todo_list/DialogUtilits.dart';
 import 'package:todo_list/FirebaseError.dart';
 import 'package:todo_list/Login/LoginScreen.dart';
+import 'package:todo_list/MyThemeData.dart';
 import 'package:todo_list/ValidationUtils.dart';
 import 'package:todo_list/providers/AuthProvider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:todo_list/providers/SettingProvider.dart';
 
 
 class Register extends StatefulWidget {
@@ -34,7 +36,11 @@ class _RegisterState extends State<Register> {
 
   @override
   Widget build(BuildContext context) {
+    var settingProvider=Provider.of<SettingProvider>(context);
     return Scaffold(
+      backgroundColor: settingProvider.IsDarkEnabled()
+          ? MyThemeData.darkprimary
+          : Colors.white,
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -74,6 +80,9 @@ class _RegisterState extends State<Register> {
                       },
                       controller: fullNameController,
                       hint: AppLocalizations.of(context)!.full_name,
+                      labelStyle: settingProvider.IsDarkEnabled()
+                          ? Colors.white
+                          : MyThemeData.darkprimary,
                     ),
                     CustomFormFeild(
                       validator: (text) {
@@ -84,6 +93,9 @@ class _RegisterState extends State<Register> {
                       },
                       controller: userNameController,
                       hint: AppLocalizations.of(context)!.user_name,
+                      labelStyle: settingProvider.IsDarkEnabled()
+                          ? Colors.white
+                          : MyThemeData.darkprimary,
                     ),
                     CustomFormFeild(
                       validator: (text) {
@@ -98,6 +110,9 @@ class _RegisterState extends State<Register> {
                       controller: emailController,
                       hint: AppLocalizations.of(context)!.email,
                       keyboardtype: TextInputType.emailAddress,
+                      labelStyle: settingProvider.IsDarkEnabled()
+                          ? Colors.white
+                          : MyThemeData.darkprimary,
                     ),
                     CustomFormFeild(
                       validator: (text) {
@@ -112,6 +127,9 @@ class _RegisterState extends State<Register> {
                       controller: passwordController,
                       secureText: true,
                       hint:AppLocalizations.of(context)!.password,
+                      labelStyle: settingProvider.IsDarkEnabled()
+                          ? Colors.white
+                          : MyThemeData.darkprimary,
                     ),
                     CustomFormFeild(
                       validator: (text) {
@@ -126,6 +144,9 @@ class _RegisterState extends State<Register> {
                       controller: confirmPasswordController,
                       secureText: true,
                       hint: AppLocalizations.of(context)!.re_password,
+                      labelStyle: settingProvider.IsDarkEnabled()
+                          ? Colors.white
+                          : MyThemeData.darkprimary,
                     ),
                     SizedBox(
                       height: 12,

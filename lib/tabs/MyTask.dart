@@ -94,7 +94,8 @@ class _MyTaskState extends State<MyTask> {
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: widget.task.isDone?Text('Done!',style: TextStyle(color: Colors.green,fontSize: 22),):
+                child: widget.task.isDone?Text('Done!',style: TextStyle(
+                    color: Colors.green,fontSize: 22),):
                 Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(18),

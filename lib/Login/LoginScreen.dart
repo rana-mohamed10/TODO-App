@@ -5,9 +5,11 @@ import 'package:todo_list/CustomFormFeild.dart';
 import 'package:todo_list/DialogUtilits.dart';
 import 'package:todo_list/FirebaseError.dart';
 import 'package:todo_list/HomeScreen/HomeScreen.dart';
+import 'package:todo_list/MyThemeData.dart';
 import 'package:todo_list/Register/Register.dart';
 import 'package:todo_list/ValidationUtils.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:todo_list/providers/SettingProvider.dart';
 
 
 import '../providers/AuthProvider.dart';
@@ -28,7 +30,11 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
+    var settingProvider=Provider.of<SettingProvider>(context);
     return Scaffold(
+      backgroundColor: settingProvider.IsDarkEnabled()
+        ? MyThemeData.darkprimary
+        : Colors.white,
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -72,6 +78,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       controller: emailController,
                       hint: AppLocalizations.of(context)!.email,
                       keyboardtype: TextInputType.emailAddress,
+                      labelStyle:settingProvider.IsDarkEnabled()
+                          ? Colors.white
+                          : MyThemeData.darkprimary,
                     ),
                     CustomFormFeild(
                       validator: (text) {
@@ -83,6 +92,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       controller: passwordController,
                       secureText: true,
                       hint: AppLocalizations.of(context)!.password,
+                      labelStyle: settingProvider.IsDarkEnabled()
+                          ? Colors.white
+                          : MyThemeData.darkprimary,
                     ),
 
                     SizedBox(
